@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+body {
+    font-family: 'Bree Serif', sans-serif;
+    text-align: center;
+    background-color: #121212;
+}
+
+h1, h2, .score{
+    color: white;
+}
+
+hr {
+    width: 500px;
+    color: #696969;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    background-color: #525252;
+    border: 6px solid #858585;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 90px;
+    height: 90px;
+    border: 5px solid #858585;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* colored tiles */
+
+.x2 {
+    background-color: #eee4da;
+    color: #6e6e6e;
+}
+
+.x4 {
+    background-color: #ece0ca;
+    color: #6e6e6e;
+}
+
+.x8 {
+    background-color: #f4b17a;
+    color: white;
+}
+
+.x16{
+    background-color: #f59575;
+    color: white;
+}
+
+.x32{
+    background-color: #f57c5f;
+    color: white;
+}
+
+.x64{
+    background-color: #f65d3b;
+    color: white;
+}
+
+.x128{
+    background-color: #edce71;
+    color: white;
+}
+
+.x256{
+    background-color: #edcc63;
+    color: white;
+}
+
+.x512{
+    background-color: #edc651;
+    color: white;
+}
+
+.x1024{
+    background-color: #eec744;
+    color: white;
+}
+
+.x2048{
+    background-color: #ecc230;
+    color: white;
+}
+
+.x4096 {
+    background-color: #fe3d3d;
+    color: white;
+}
+
+.x8192 {
+    background-color: #ff2020;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    #board {
+        width: 200px;
+        height: 200px;
+    }
+    .tile {
+        width: 45px;
+        height: 45px;
+        border: 2.5px solid #bbada0;
+        font-size: 20px;
+    }
+    hr{
+        width: 200px;
+    }
+}
