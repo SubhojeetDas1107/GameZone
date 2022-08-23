@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+.background {
+    background-color: #121212;
+    height: 100vh;
+    padding-top: 1px;
+}
+
+.container {
+    margin: 5% auto ;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 900px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.tile {
+    min-width: 100px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+#d,#e,#f,#g,#h,#i{
+    border-top: 2px solid white;
+}
+
+#b,#c,#e,#f,#h,#i{
+    border-left: 2px solid white;
+}
+
+#a{
+    background-color: #303030;
+}
+
+#b,#d{
+    background-color: #404040;
+}
+
+#c,#e,#g{
+    background-color: #505050;
+}
+
+#f,#h{
+    background-color: #606060;
+}
+
+#i{
+    background-color: #707070;
+}
+
+#a:hover{
+    background-color: #505050;
+    transition: linear .2s;
+}
+
+#b:hover,#d:hover{
+    background-color: #606060;
+    transition: linear .2s;
+}
+
+#c:hover,#e:hover,#g:hover{
+    background-color: #707070;
+    transition: linear .2s;
+}
+
+#f:hover,#h:hover{
+    background-color: #808080;
+    transition: linear .2s;
+}
+
+#i:hover{
+    background-color: #909090;
+    transition: linear .2s;
+}
+
+#g,#h,#i{
+    font-size: 20px;
+}
+
+#a,#b,#c{
+    font-size: 100px;
+}
+
+
+/* Media Query */
+@media screen and (max-width: 700px){
+    #a,#b,#c{
+        font-size: 70px;
+    }    
+    #d,#e,#f{
+        font-size: 45px;
+    }
+    #g,#h,#i{
+        font-size: 15px;
+    }
+    .container{
+        margin: 15% auto;
+    }
+}
+@media screen and (max-width: 520px){
+    #a,#b,#c{
+        font-size: 60px;
+    }    
+    #d,#e,#f{
+        font-size: 30px;
+    }
+    #g,#h,#i{
+        font-size: 15px;
+    }
+    .container{
+        margin: 25% auto;
+    }
+}
