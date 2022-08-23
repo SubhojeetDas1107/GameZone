@@ -224,7 +224,7 @@ footer a{
     cursor: pointer;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .container{
         display: grid;
         grid-template-columns: 140px 140px;
