@@ -15377,7 +15377,7 @@ const targetWords = [
     }, "")
   
     if (!dictionary.includes(guess)) {
-      showAlert("Not in word list")
+      showAlert("Word is not in the list")
       shakeTiles(activeTiles)
       return
     }
@@ -15457,7 +15457,7 @@ const targetWords = [
   
   function checkWinLose(guess, tiles) {
     if (guess === targetWord) {
-      showAlert("You Win", 5000)
+      showAlert("Correct guess! You Win", 5000)
       danceTiles(tiles)
       stopInteraction()
       return
