@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess The Number</title>
+    <link rel="icon" href="assets/icon.png">
+</head>
+<body>
+    <canvas id='Matrix'></canvas>
+    <script src="./matrix.js"></script>
+    
+    <div id="heading"><span style="background-color: rgba(0, 0, 0, 0.514);">Guess The Number</span></div>
+    <div id="game">
+        <section id="boss">
+            <div id="bot"></div>
+            <div id="dialogue"><br><br> Hello :) Can you guess the number I generated?<br> Take a guess, I'll say higher or lower</div>
+        </section>
+
+        <section id="ui">
+            <span id="guess">Take A Guess:</span>
+            <input type="number" id="guesst" placeholder="Enter your Guess">
+            <button id="submit" onclick="guesser()">Submit</button>
+        </section>
+        <div id="score">Number Of Guesses Left : 07<br></div>
+        <div id="inst"><b>Instructions :</b>
+            <ul>
+                <li>The number I generated is between 1 and 100 (1 & 100 included)</li>
+                <li>You have to guess the number in 7 tries</li>
+                <li>If you guess the number, you win</li>
+                <li>If you don't guess the number, you lose</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
