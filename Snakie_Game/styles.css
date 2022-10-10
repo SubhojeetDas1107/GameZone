@@ -1,0 +1,183 @@
+/* variables */
+:root {
+    --Bsnake-height: 20px;
+    --Bsnake-width: 20px;
+}
+
+.food {
+    height: var(--Bsnake-height);
+    width: var(--Bsnake-width);
+    background-color: green;
+    border-radius: 12px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+html {
+    background-color: rgb(68, 57, 49);
+}
+
+* {
+    margin: 0px; 
+    padding: 0px;
+}
+
+body {
+    color: white;
+}
+
+#upperground {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ground {
+    background-color: black;
+    height: 0px;
+    width: 0px;
+}
+
+#my {
+    background-color: rgb(223, 204, 204);
+    width: var(--Bsnake-width);
+    height: var(--Bsnake-height);
+    position: relative;
+    top: -20px;
+    left: 0px;
+}
+
+.snake {
+    background-color: red;
+    width: var(--Bsnake-width);
+    height: var(--Bsnake-height);
+    position: absolute;
+    border-radius: 8px;
+    top: 0px;
+    left: 0px;
+}
+
+#first {
+    background-color: red;
+    width: var(--Bsnake-width);
+    height: var(--Bsnake-height);
+    position: relative;
+    border-radius: 5px;
+    top: -20px;
+    left: 0px;
+}
+
+.imf {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: 200px;
+    background-color: rgb(44, 23, 58);
+    color: rgb(177, 223, 13);
+    opacity: 0.6;
+    height: 30px;
+    border: 2px solid rgb(100, 21, 61);
+}
+
+#score {
+    
+    right: 0px;
+}
+
+#level {
+    padding: 0px 5px 0 5px;
+    display: none;
+    left: 0px;
+    min-width: 150px;
+}
+
+#time {
+    padding: 0px 5px 0 5px;
+    min-width: 150px;
+}
+
+select {
+    font-size: 16px;
+    background-color: rgb(131, 87, 87);
+    color: white;
+}
+
+#gameover {
+    display: none;
+    position: absolute;
+    top: 50%;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    z-index: 1;
+    width: 500px;
+    border-right: 5px solid rgb(46, 42, 42);
+    border-bottom: 5px solid rgb(46, 42, 42);
+    box-shadow: 0px 0px 5px 5px rgb(48, 46, 46);
+    background-color: rgb(39, 26, 26);
+}
+
+#gameover h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 90px;
+    text-shadow: 5px 5px 5px rgb(146, 86, 86);
+}
+
+#fscore {
+    margin-top: 70px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgb(206, 145, 145);
+    font-size: 40px;
+}
+
+button {
+    display: block;
+    width: 200px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(247, 210, 162);
+    margin-top: 30px;
+    font-size: 16px;
+    height: 40px;
+    box-shadow: 0px 0px 5px 5px rgb(48, 46, 46);
+}
+
+.touch_controls {
+    position: absolute;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.touch_controls div {
+    border: 2px solid rgb(100, 21, 61);
+    color: rgb(177, 223, 13);
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    font-size: 50px;
+    opacity: 0.6;
+}
+.touch_controls .move_up {
+    grid-column: 2;
+    grid-row: 1;
+}
+.touch_controls .move_down {
+    grid-column: 2;
+    grid-row: 3;
+}
+.touch_controls .move_left {
+    grid-column: 1;
+    grid-row: 2;
+}
+.touch_controls .move_right {
+    grid-column: 3;
+    grid-row: 2;
+}
