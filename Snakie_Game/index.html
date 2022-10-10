@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./script.js"></script>
+    <title>snaky</title>
+</head>
+<body>
+    <div id="upperground">
+        <div id="ground">
+            <div id="gameover">
+                <h1>GAME OVER</h1>
+                <p id="fscore">Score</p>
+                <button id="hah">Play Again</button>
+            </div>
+            <div class="imf" id="level"><label for="difficulty">Difficulty: </label><select name="difficulty" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select></div>
+            <div class="imf" id="time">TimeSpent: 0 secs</div>
+            <div class="imf" id="score"></div>
+            <div class="food" id="ah"></div>
+            <div id="first" class="snake"></div>
+        </div>
+        <div class="touch_controls">
+            <div class="move_up">⇧</div>
+            <div class="move_left">⇦</div>
+            <div class="move_right">⇨</div>
+            <div class="move_down">⇩</div>
+        </div>
+    </div>
+</body>
+</html>
