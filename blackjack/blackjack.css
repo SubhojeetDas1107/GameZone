@@ -1,0 +1,238 @@
+:root {
+    --gold: rgba(255, 217, 0, 0.901);
+    --darkgold: rgba(172, 148, 14, 0.681);  
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* a:hover a:focus a:active {
+    text-decoration: none;
+    color: inherit;
+} */
+
+body {
+    background-image: url(images/green-table.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Anton', sans-serif;
+    color: gold;
+    overflow: hidden;
+}
+
+/* #wrapper {
+    width: 100%;
+    height: 100%;
+} */
+
+#message{
+    margin: 5px 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* .text {
+    color: green;
+} */
+
+#messageDiv {
+    font-size: 40px;
+    
+}
+
+#container {
+    text-align: center;
+    
+}
+
+#playerCards {
+    height: 180px;
+    margin: 5px;
+    /*opacity: 0.9;*/
+}
+
+#dealerCards {
+    height: 180px;
+    margin: 5px;
+    /*opacity: 0.9;*/
+}
+
+#card-id {
+    width: 100px;
+    height: auto;
+    margin: 20px;
+    text-align: center;
+}
+
+#navWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 40px;
+    height: auto;
+    text-align: center;
+}
+
+#blackJack {
+    font-size: 40px;
+}
+
+#placeHolder {
+    visibility: hidden;
+}
+
+#cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    
+}
+#coins {
+    /*visibility: hidden;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    /*margin-top: 10px;
+    margin-left: 20px;*/
+    font-size: 26px;
+    
+}
+.btn {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15%;
+    background-color: var(--gold);
+    height: 40px;
+    font-weight: bold;
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    
+} 
+
+#startBtn {
+    /*padding: 10px;
+    margin: 10px;
+    border-radius: 15%;*/
+    background-color: gold;
+    
+}
+
+#anotherCardBtn {
+    /*padding: 10px;
+    margin: 10px;
+    border-radius: 15%;*/
+    background-color: var(--gold);
+    display: none;
+
+}
+
+#againBtn {
+    display: none;
+    /*padding: 10px;
+    margin: 10px;
+    border-radius: 15%;*/
+    background-color: rgba(172, 148, 14, 0.681);
+}
+
+#holdBtn {
+    display: none;
+    
+
+}
+
+#points {
+    font-size: 18px;
+    margin-top: 5px;
+    visibility: hidden;
+}
+
+#dealerPoints {
+    visibility: hidden;
+}
+
+#dealerCardsId {
+    display: none;
+    color: white;
+}
+
+
+
+#navwrapper{
+    display: flex;
+    
+}
+
+/* #link {
+    text-align: center;
+    margin-top: 60px;
+    color: blue;
+    
+}
+
+#link a {
+    color: gold;
+    text-decoration: none;
+} */
+
+/* #linkDiv {
+    margin-top: 200px;
+
+}
+
+#portfolioLink  {
+    text-decoration: none;
+    color: gold;
+    
+}  */
+
+/* .invisible {
+    display: none;
+} */
+
+@media ( max-width: 500px ) {
+    #card-id {
+        height: 80px;
+        width: auto;
+    }
+
+    #messageDiv {
+        font-size: 30px;
+        
+    }
+
+    #buttonDiv {
+        height: 50px;
+        
+    } 
+
+    #playerCards {
+        height: 100px;
+        
+    }
+    
+    #dealerCards {
+        height: 100px;
+        
+    }
+
+    .cardsDiv {
+        flex-wrap: wrap;
+    }
+
+};
+
+/* @media ( max-width: 500px ) {
+    #message {
+        color: red;
+    }
+} */

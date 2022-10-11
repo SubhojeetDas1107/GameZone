@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/blackjack/blackjack.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="navWrapper">
+            
+            <p id="coins">coins: </p>
+            <p id="blackJack">BLACK JACK</p>
+            
+            
+        </div>
+        
+        
+        <div id="container">
+            <div class='text' id="messageDiv">
+                <p id="message"></p>
+                
+            </div>
+            
+        </div>
+        <div id="cards-wrapper">
+            
+            <p class='text' id="points">Points: </p>
+            <div class='cardsDiv' id="playerCards"></div>
+            
+            <div id="buttonDiv">
+                <button class="btn" id="startBtn">Start Game</button>
+                <button class="btn" id="anotherCardBtn">Another Card</button>
+                <button class="btn" id="holdBtn">Hold</button>
+                <button class="btn" id="againBtn">Play Again</button>
+            </div>
+            <p id="dealerCardsId">Dealer's cards:</p>
+            <div class='cardsDiv' id="dealerCards"></div>
+            <p class='text' id="dealerPoints">Points: </p>
+            
+        </div>
+        
+    </div>
+    <div>
+        <audio id="cardWav" src="/blackjack/sounds/carddeal3.wav" ></audio>
+        <audio id="coinsAudio" src="/blackjack/sounds/coins3.wav"></audio>
+        <audio id="coinsAudio2" src="/blackjack/sounds/coins7big.wav"></audio>
+        <audio id="coinsAudio3" src="/blackjack/sounds/coins2.wav"></audio>
+        <audio id="loose1" src="/blackjack/sounds/loose1.wav"></audio>
+        <audio id="loose2" src="/blackjack/sounds/loose2.wav"></audio>
+        <!--<audio id="gameOver3" src=""></audio>-->
+        <audio id="win1" src="/blackjack/sounds/win.wav"></audio>
+        <audio id="blackJack" src="/blackjack/sounds/win2.wav"></audio>
+        <audio id="btnSound" src="/blackjack/sounds/btnSound.wav"></audio>
+    </div>
+    
+     
+    
+    
+    
+    
+    
+    
+    
+    <script src="/blackjack/blackjack.js"></script>
+</body>
+
+</html>
