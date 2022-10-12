@@ -3,7 +3,7 @@ var r = Math.floor(Math.random() * 100) + 1;
 var turn = 7;
 let sc = document.getElementById('score');
 let dialog = document.getElementById('dialogue');
-ox = document.getElementById('guesst');
+ox = document.getElementById('guest');
 function guesser(){
     x = ox.value;
     if(x>0 && x<=100){
@@ -21,13 +21,13 @@ function guesser(){
         else if(x>r){
             dialog.innerHTML = "";
             setTimeout(rite=>{
-                dialog.innerHTML = "<br><br> Too High, Try to guess Lower! :)";
+                dialog.innerHTML = "<br><br> Too High, Try to guess Lower!<img class = 'message-image' src = './assets/decrease.png'>:)";
             },200);
         }
         else{
             dialog.innerHTML = "";
             setTimeout(rite=>{
-                dialog.innerHTML = "<br><br> Too Low, Try to guess Higher! :)";
+                dialog.innerHTML = "<br><br> Too Low, Try to guess Higher!<img class = 'message-image' src = './assets/increase.png'>:)";
             },200);
             
         }
@@ -50,7 +50,6 @@ function guesser(){
         return;
     }
 }
-
 
 document.addEventListener("keypress", (event)=> {
     if (event.keyCode === 13) { // key code of the keybord key
