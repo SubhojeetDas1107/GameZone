@@ -1,24 +1,17 @@
 # Hacktoberfest 2022
 <img width="2400" alt="Email Banners-Dark" src="https://user-images.githubusercontent.com/80981317/192709928-0231082d-5654-4f52-8fef-ed51d7ef9b83.png">
  
+<a href="#"><img width="100%" height="auto" src="https://share.creavite.co/OnLtIVtAjk2xJk0H.gif"/></a>
+ 
 ## This project is perfect for your pull requests
 
 🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the 2022 challenge and earn a limited edition T-shirt.**
 
 📢 Register [here](https://hacktoberfest.digitalocean.com) for Hacktoberfest and make four pull requests (_PR_) between October 1st - 31st to grab free SWAGS 🔥
 
-
-# GameZone
+# [GameZone](https://subhojeetdas1107.github.io/GameZone/)
 
 A one stop website for all mini games for your boring and lazy times, comfort games like tik-tac-toe, rock-paper-scissors etc are some games available.
-
-## Why GameZone?
-
-These games are meant to be quick refreshers that don't take much time to play and do not engage players for a long time. <br>
-Are you tired from studying too long, play a quick game and get back to your studies with a refreshed mind, the games are quick and won't engage you for long. <br>
-Are you tired of scrolling socials , want a change of pace but too lazy to play a complex game, play a quick refreshing game and get back to your usual fun with a refreshed changed pace. <br>
-Getting bored at a lecture , want to gain back your attention? play a quick little game and get back to your lecture with a refreshed mind.<br>
-We all know how we open a game or social media to get a quick refreshment and end up wasting a lot of time without even realising, well That's not a problem if you play our quick mini games, which are quick to play and will not engage you for long. So get your much needed refreshment without worrying about wasting time.
 
 ## How To Contribute?
 
@@ -26,8 +19,8 @@ Feel Free to add your own game to the website, just make sure it is not already 
 If you want to improve the way the website looks, feel free to make changes in the CSS and create a Pull request.
 
 
-## How to be eligible for a PR:
-- Step 0: Fork this repository 
+## Steps to be eligible for a PR:
+- Step 0: Star and Fork this repository 
 - Step 1: Add your game folder into the repository
 - Step 2: Link the game in index.html file in root folder
 - Step 3: Add your Github username and Github profile link in the CONTRIBUTORS.md file.
@@ -36,7 +29,7 @@ If you want to improve the way the website looks, feel free to make changes in t
 
 
 ## Criteria For The Games :
-1. Game should be single player/ played against computer.
+1. The game should be unique. (not in the repo already)
 2. Game should be small scale and quick to play.
 3. Game should be in dark background to match the theme. (preferable only)
 4. Game must have an icon.
@@ -59,5 +52,10 @@ If you want to improve the way the website looks, feel free to make changes in t
 
 <br>
 
-### Try Out The Website Here : [GameZone](https://subhojeetdas1107.github.io/GameZone/)<br>
-Note : The Game is in test version and does not reflect what the finished product will look like.<br><br>
+## Contributors for `Hacktoberfest 2022`
+
+<div align="center">
+<a href="https://github.com/SubhojeetDas1107/GameZone/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=SubhojeetDas1107/GameZone" />
+</a>
+</div>
