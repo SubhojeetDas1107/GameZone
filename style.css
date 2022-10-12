@@ -100,7 +100,8 @@ html,body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .lights{
@@ -138,6 +139,9 @@ img{
     text-align: center;
     font-size: large;
     background-color: #292929;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .links{
