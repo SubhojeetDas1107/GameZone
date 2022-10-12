@@ -21,13 +21,13 @@ function guesser(){
         else if(x>r){
             dialog.innerHTML = "";
             setTimeout(rite=>{
-                dialog.innerHTML = "<br><br> Too High, Try to guess Lower! :)";
+                dialog.innerHTML = "<br><br> Too High, Try to guess Lower!<img class = 'message-image' src = './assets/decrease.png'>:)";
             },200);
         }
         else{
             dialog.innerHTML = "";
             setTimeout(rite=>{
-                dialog.innerHTML = "<br><br> Too Low, Try to guess Higher! :)";
+                dialog.innerHTML = "<br><br> Too Low, Try to guess Higher!<img class = 'message-image' src = './assets/increase.png'>:)";
             },200);
             
         }

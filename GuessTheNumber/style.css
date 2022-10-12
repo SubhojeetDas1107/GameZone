@@ -49,6 +49,7 @@ body::before {
     align-items: center;
     text-align: center;
     box-shadow: 1px 1px 10px 5px rgba(255, 255 ,255 ,0.6);
+    padding:10px 15px;
 }
 
 #boss{
@@ -70,7 +71,6 @@ body::before {
     animation: upDown 1s ease-in-out infinite alternate;
     font-size: 10px;
 }
-
 
 #bot{
     display: inline-block;
@@ -99,12 +99,15 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border:2px solid red; */
+    flex-wrap: wrap;
 }
 
 #guess{
     color:white;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 1.5rem;
+    /* border:2px solid yellow; */
 }
 
 #guest{
@@ -147,101 +150,79 @@ body::before {
     margin-top: 20px;
 }
 
-
-@media screen and (max-width: 1100px) {
-    #guess{
-        font-size: 16px;
-    }
-    #guesst{
-        font-size: 16px;
-    }
-    #submit{
-        font-size: 16px;
-    }
-    #inst{
-        font-size: 14px;
-    }
+.message-image {
+    width:10px;
+    height:10px;
 }
+@media only screen and (max-width: 1150px) {
+    #guess {
+        font-size : 1.2rem;
+    }
+
+    #guest, #submit{
+        font-size: 1rem;
+    }
+
+    #inst {
+        font-size:0.85rem;
+    }
+}  
 
 @media screen and (max-width: 745px) {
-    #guess{
-        font-size: 16px;
+    #guess, #score{
+        font-size: 1rem;
     }
-    #guesst{
-        font-size: 16px;
-    }
-    #submit{
-        font-size: 16px;
-    }
+
     #inst{
-        font-size: 14px;
+        font-size: 0.85rem;
     }
-    #ui{
-        flex-direction: column;
-    }
-    #score{
-        font-size: 16px;
-    }
+
     #game{
         height: auto;
     }
-
-    
 }
 
 @media screen and (max-width: 715px) {
     #game{
-        padding: 10px;
         margin-bottom: 20px;
     }
-    #guess{
-        font-size: 16px;
-    }
-    #guesst{
-        font-size: 16px;
-    }
-    #submit{
-        font-size: 16px;
-    }
-    #inst{
-        font-size: 14px;
-    }
-    #ui{
-        flex-direction: column;
-    }
+
     #score{
-        font-size: 14px;
-    }
-    #game{
-        height: auto;
-    }
-    #boss{
-        display:flexbox;
+        font-size: 0.85rem;
     }
     
     #dialogue{
-        text-align: center;
-        justify-content: center;
         width: 144px;
         height: 120px;
-        margin-bottom: 90px;
-        background-image: url('./assets/dialoguebox.png');
         background-size: 144px 120px;
-        font-family: monospace;
-        animation: upDown 1s ease-in-out infinite alternate;
-        font-size: 10px;
     }
-    
     
     #bot{
         width: 72px;
         height: 144px;
-        margin-top: 50px;
-        background-image: url('./assets/boss.png');
         background-size: 72px 144px;
         margin-left: 0px;
     }
+
     #heading{
-        font-size: 36px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width : 580px) {
+    #guest {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #guest {
+        width:95%;
     }
 }
