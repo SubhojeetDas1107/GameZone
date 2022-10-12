@@ -3,7 +3,7 @@ var r = Math.floor(Math.random() * 100) + 1;
 var turn = 7;
 let sc = document.getElementById('score');
 let dialog = document.getElementById('dialogue');
-ox = document.getElementById('guesst');
+ox = document.getElementById('guest');
 function guesser(){
     x = ox.value;
     if(x>0 && x<=100){
@@ -50,7 +50,6 @@ function guesser(){
         return;
     }
 }
-
 
 document.addEventListener("keypress", (event)=> {
     if (event.keyCode === 13) { // key code of the keybord key

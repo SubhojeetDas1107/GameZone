@@ -1,37 +1,54 @@
 body{
-    background-color: black;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background: url("./assets/background_image.jpg");
+    position:relative;
+    height:100vh;
+    width:100vw;
 }
+
+body::before {
+    content: "";
+    color:white;
+    min-height:100%;
+    min-width:100%;
+    position:absolute;
+    left:0px;
+    height:0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#game-container {
+    position:absolute;
+    height:100%;
+    width: 100%;
+    top:0px;
+    left:0px;
+}
+
 #heading{
     font-family: 'Permanent Marker', cursive;
-    font-size: 50px;
+    font-size: 3.125rem;
     text-align: center;
-    color: rgb(57, 227, 57);
+    color: #fff;
     font-weight: bolder;
-    text-shadow: 2px 2px rgb(36, 149, 36);
-    margin-top: 10px;
+    text-shadow: 2px 2px rgb(100, 200, 180);
+    margin-top:1rem;
     /* animation: upDown 1s ease-in-out infinite alternate; */
 }
 
 #game{
     width: 60%;
-    height: 500px;
+    min-height: 31.25rem;
     border-color: white;
     border-style: solid;
     margin: auto;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.749);
+    margin-top: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
     text-align: center;
-}
-
-#Matrix{
-    position: fixed;
-    width : 100%;
-    height : 100vh;
-    z-index: -1;
-    overflow-x: hidden;
+    box-shadow: 1px 1px 10px 5px rgba(255, 255 ,255 ,0.6);
 }
 
 #boss{
@@ -90,19 +107,25 @@ body{
     font-size: 30px;
 }
 
-#guesst{
+#guest{
     color: black;
-    font-size: 22px;
+    font-size: 1.3rem;
+    padding:5px 10px;
     font-family: monospace;
     margin : 10px;
+    border-radius:5px;
+    outline:none;
 }
 
 #submit{
-    font-size: 22px;
+    font-size: 1.2rem;
+    padding:5px 15px;
     font-family: monospace;
     background-color: rgb(57, 227, 57);
     border-radius: 10px;
     box-shadow: 2px 2px rgb(36, 149, 36);
+    border: 1px solid green;
+    cursor:pointer;
 }
 
 #score{
