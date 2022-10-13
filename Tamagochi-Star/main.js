@@ -9,6 +9,7 @@ const $grogu = $('#grogu')
 const $sleepingGrogu = $('#sleeping-grogu')
 const $gameOver = $('#game-over')
 const $score = $('#score-number')
+const $btStar = $('#start-screen')
 const initGame = new Date()
 let interval = null
 let isSleeping = false
@@ -18,6 +19,34 @@ const stack = {
   tired: 100,
   hungry: 100,
   lastUpdate: new Date(),
+}
+const auidos = {
+  bg: new Audio('assets/background.mp3'),
+  gm: new Audio('assets/gameover.mp3'),
+  sl: new Audio('assets/sleeping.mp3'),
+}
+
+const sountrack = {
+  playBg: async () => {
+    auidos.bg.play()
+    auidos.bg.loop = true
+  },
+  gameover: async () => {
+    auidos.bg.pause()
+    auidos.gm.play()
+    auidos.gm.loop = true
+  },
+  sleeping: async () => {
+    auidos.bg.pause()
+    auidos.sl.play()
+    auidos.sl.volume = 0.5
+    auidos.sl.loop = true
+  },
+  playBgAgain: async () => {
+    auidos.sl.pause()
+    auidos.bg.play()
+    auidos.bg.loop = true
+  },
 }
 
 const animation = () => {
@@ -208,6 +237,7 @@ const sleeping = () => {
     $tired.setAttribute('value', stack.tired)
   } else {
     isSleeping = false
+    sountrack.playBgAgain()
     $displayGlass.classList.remove('displaySleep')
     $btSleep.innerText = 'SLEEP'
     $grogu.style.display = 'block'
@@ -217,6 +247,7 @@ const sleeping = () => {
 }
 
 const gameover = () => {
+  sountrack.gameover()
   $grogu.style.display = 'none'
   $sleepingGrogu.style.display = 'none'
   $score.innerHTML = Math.floor(
@@ -234,8 +265,9 @@ $btEat.addEventListener('click', () => {
 
 $btSleep.addEventListener('click', () => {
   isSleeping = !isSleeping
-  console.log($displayGlass)
+
   if (isSleeping) {
+    sountrack.sleeping()
     $displayGlass.classList.add('displaySleep')
     $btSleep.innerText = 'WAKE UP'
     $grogu.style.display = 'none'
@@ -245,6 +277,7 @@ $btSleep.addEventListener('click', () => {
       sleeping()
     }, 2000)
   } else {
+    sountrack.playBgAgain()
     $grogu.style.display = 'block'
     $sleepingGrogu.style.display = 'none'
 
@@ -254,8 +287,10 @@ $btSleep.addEventListener('click', () => {
   }
 })
 
-window.onload = function () {
+$btStar.addEventListener('click', () => {
+  $btStar.style.display = 'none'
   interval = setInterval(() => {
     updateStack()
   }, 4000)
-}
+  sountrack.playBg()
+})

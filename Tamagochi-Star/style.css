@@ -4,6 +4,7 @@ body{
   min-height:100vh ;
   box-sizing: border-box;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -68,11 +69,30 @@ progress{
   flex-wrap: wrap;
   
 }
+
 .controls button{
   font-weight: bolder;
   width:300px;
   height: 30px;
   cursor: pointer;
+  border-radius: 10px;
+  animation: rotate 1.5s linear infinite;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0)
+}
+#start-screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  top:0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(47, 49, 49, 0.822);
+  color: white;
+  font-size: x-large;
+  z-index: 50;
 }
 #eyes-tired{
   opacity:0;
@@ -99,11 +119,7 @@ progress{
   z-index: 4;
   display: none;
 }
-button{
-  border-radius: 10px;
-  animation: rotate 1.5s linear infinite;
-  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0)
-}
+
 @keyframes rotate {
   0%{
       filter: hue-rotate(0deg);
