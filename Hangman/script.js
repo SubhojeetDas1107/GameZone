@@ -237,3 +237,17 @@ const drawMan = (count) => {
 //New Game
 newGameButton.addEventListener("click", initializer);
 window.onload = initializer;
+
+var forDark = document.getElementById("for-dark");
+        var forLight = document.getElementById("for-light");
+        function Black() {
+            document.body.style.backgroundColor = "#f4c531";
+            forLight.style.backgroundColor = "#333";
+            forDark.style.backgroundColor = "white";
+
+        }
+        function White() {
+            document.body.style.backgroundColor = "#333";
+            forDark.style.backgroundColor = "#333";
+            forLight.style.backgroundColor = "white";
+        }
