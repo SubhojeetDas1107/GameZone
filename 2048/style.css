@@ -4,6 +4,12 @@ body {
     font-family: 'Bree Serif', sans-serif;
     text-align: center;
     background-color: #121212;
+    
+}
+
+#leftArrow {
+    padding-left: 30px;
+
 }
 
 h1, h2, .score{
