@@ -234,7 +234,19 @@ function winGame() {
 }
 
 
+var forDark = document.getElementById("for-dark");
+var forLight = document.getElementById("for-light");
+function Black() {
+    document.body.style.backgroundColor = "white";
+    forLight.style.backgroundColor = "#333";
+    forDark.style.backgroundColor = "white";
 
+}
+function White() {
+    document.body.style.backgroundColor = "#333";
+    forDark.style.backgroundColor = "#333";
+    forLight.style.backgroundColor = "white";
+}
 
 
 
