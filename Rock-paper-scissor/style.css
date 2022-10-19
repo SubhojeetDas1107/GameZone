@@ -6,12 +6,12 @@
 
 section {
   height: 100vh;
-  background-color: rgb(39, 41, 68);
+  /* background-color: rgb(39, 41, 68); */
   font-family: sans-serif;
 }
 
 .score {
-  color: rgb(224, 224, 224);
+  /* color: rgb(224, 224, 224); */
   height: 20vh;
   display: flex;
   justify-content: space-around;
@@ -27,7 +27,7 @@ section {
 }
 
 .intro {
-  color: rgb(224, 224, 224);
+  /* color: rgb(224, 224, 224); */
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ section {
   height: 50px;
   background: none;
   border: none;
-  color: rgb(224, 224, 224);
+  /* color: rgb(224, 224, 224); */
   font-size: 20px;
   background: rgb(45, 117, 96);
   border-radius: 3px;
@@ -60,7 +60,7 @@ section {
   transition: opacity 0.5s ease 0.5s;
 }
 .winner {
-  color: rgb(224, 224, 224);
+  /* color: rgb(224, 224, 224); */
   text-align: center;
   font-size: 50px;
 }
@@ -84,6 +84,35 @@ div.fadeOut {
 div.fadeIn {
   opacity: 1;
   pointer-events: all;
+}
+
+.mode {
+  /* border: 1px solid #333; */
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width:fit-content;
+  box-shadow:aquamarine 0px 2px 4px 0px, aquamarine 0px 2px 16px 0px;
+}
+
+#for-light {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-color: white;
+  border: 1px solid silver;
+  background-color:#333;
+}
+
+#for-dark {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-left: -10px;
+  border-color: white;
+  border: 1px solid silver;
 }
 
 @keyframes shakePlayer {
