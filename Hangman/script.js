@@ -8,7 +8,7 @@ const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 
 //Options values for buttons
-let options = {
+let options1 = {
   fruits: [
     "Apple",
     "Blueberry",
@@ -26,8 +26,14 @@ let options = {
     "Zimbabwe",
     "Dominica",
   ],
+  languages: ["English", "Mandarin", "Hindi", "Spanish", "French", "Arabic", "Bengali", "Russian", "Portuguese", "Indonesian"]
 };
-
+let options2 = {
+  Colors: ["Red", "Blue", "Green", "White", "Black", "Voilet", "Brown", "Grey", "Pink"],
+  Sports: ["Football", "Badminton", "Cricket", "Hockey", "Tennis", "Baseball", "Golf"],
+  Body: ["Eyes", "Ears", "Neck", "Hands", "Legs", "Nose", "Brain"],
+  Days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+};
 //count
 let winCount = 0;
 let count = 0;
@@ -35,10 +41,19 @@ let count = 0;
 let chosenWord = "";
 
 //Display option buttons
-const displayOptions = () => {
+const displayOptions1 = () => {
   optionsContainer.innerHTML += `<h3>Please Select An Option</h3>`;
   let buttonCon = document.createElement("div");
-  for (let value in options) {
+  for (let value in options1) {
+    buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
+  }
+  optionsContainer.appendChild(buttonCon);
+};
+
+const displayOptions2 = () => {
+
+  let buttonCon = document.createElement("div");
+  for (let value in options2) {
     buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
   }
   optionsContainer.appendChild(buttonCon);
@@ -143,7 +158,9 @@ const initializer = () => {
     letterContainer.append(button);
   }
 
-  displayOptions();
+  displayOptions1();
+  displayOptions2();
+
   //Call to canvasCreator (for clearing previous canvas and creating initial canvas)
   let { initialDrawing } = canvasCreator();
   //initialDrawing would draw the frame
@@ -239,15 +256,15 @@ newGameButton.addEventListener("click", initializer);
 window.onload = initializer;
 
 var forDark = document.getElementById("for-dark");
-        var forLight = document.getElementById("for-light");
-        function Black() {
-            document.body.style.backgroundColor = "#f4c531";
-            forLight.style.backgroundColor = "#333";
-            forDark.style.backgroundColor = "white";
+var forLight = document.getElementById("for-light");
+function Black() {
+  document.body.style.backgroundColor = "#f4c531";
+  forLight.style.backgroundColor = "#333";
+  forDark.style.backgroundColor = "white";
 
-        }
-        function White() {
-            document.body.style.backgroundColor = "#333";
-            forDark.style.backgroundColor = "#333";
-            forLight.style.backgroundColor = "white";
-        }
+}
+function White() {
+  document.body.style.backgroundColor = "#333";
+  forDark.style.backgroundColor = "#333";
+  forLight.style.backgroundColor = "white";
+}
