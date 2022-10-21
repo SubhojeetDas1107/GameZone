@@ -26,6 +26,8 @@ body {
 #options-container div {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
   margin: 1.2em 0 2.4em 0;
 }
