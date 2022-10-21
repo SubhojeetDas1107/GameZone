@@ -8,7 +8,7 @@ const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 
 //Options values for buttons
-let options1 = {
+let options = {
   fruits: [
     "Apple",
     "Blueberry",
@@ -26,9 +26,8 @@ let options1 = {
     "Zimbabwe",
     "Dominica",
   ],
-  languages: ["English", "Mandarin", "Hindi", "Spanish", "French", "Arabic", "Bengali", "Russian", "Portuguese", "Indonesian"]
-};
-let options2 = {
+  languages: ["English", "Mandarin", "Hindi", "Spanish", "French", "Arabic", "Bengali", "Russian", "Portuguese", "Indonesian"],
+
   Colors: ["Red", "Blue", "Green", "White", "Black", "Voilet", "Brown", "Grey", "Pink"],
   Sports: ["Football", "Badminton", "Cricket", "Hockey", "Tennis", "Baseball", "Golf"],
   Body: ["Eyes", "Ears", "Neck", "Hands", "Legs", "Nose", "Brain"],
@@ -41,10 +40,10 @@ let count = 0;
 let chosenWord = "";
 
 //Display option buttons
-const displayOptions1 = () => {
+const displayoptions = () => {
   optionsContainer.innerHTML += `<h3>Please Select An Option</h3>`;
   let buttonCon = document.createElement("div");
-  for (let value in options1) {
+  for (let value in options) {
     buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
   }
   optionsContainer.appendChild(buttonCon);
@@ -90,7 +89,7 @@ const generateWord = (optionValue) => {
   letterContainer.classList.remove("hide");
   userInputSection.innerText = "";
 
-  let optionArray = options1[optionValue] || options2[optionValue];
+  let optionArray = options[optionValue];
   //choose random word
   chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
   chosenWord = chosenWord.toUpperCase();
@@ -158,8 +157,7 @@ const initializer = () => {
     letterContainer.append(button);
   }
 
-  displayOptions1();
-  displayOptions2();
+  displayoptions();
 
   //Call to canvasCreator (for clearing previous canvas and creating initial canvas)
   let { initialDrawing } = canvasCreator();
