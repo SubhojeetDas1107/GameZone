@@ -90,7 +90,7 @@ const generateWord = (optionValue) => {
   letterContainer.classList.remove("hide");
   userInputSection.innerText = "";
 
-  let optionArray = options[optionValue];
+  let optionArray = options1[optionValue] || options2[optionValue];
   //choose random word
   chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
   chosenWord = chosenWord.toUpperCase();
