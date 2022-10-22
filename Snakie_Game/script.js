@@ -1,9 +1,9 @@
-// the meat comes here 
+// the meat comes here
 $(function(){
     // time counter
     var counting = 1
- 
-    // important values 
+
+    // important values
     var go = $("#gameover")
     var show = $("#hah")
     var fscore = $("#fscore")
@@ -28,22 +28,22 @@ $(function(){
 
     // setting up the score
     scoreel.text("Score: 0")
-    
+
     // catching the elements
     var ground = $("#ground");
     var part = $("#first");
     var food = $(".food");
 
-    // adjusting the ground 
+    // adjusting the ground
     ground.css({
         "height": `+=${gheight}`,
         "width": `+=${gwidth}`
     })
 
-    // getting the initial random position of food 
-    var foodx = 20*(Math.floor((gwidth/20)*(Math.random()))) 
+    // getting the initial random position of food
+    var foodx = 20*(Math.floor((gwidth/20)*(Math.random())))
     var foody = 20*(Math.floor((gheight/20)*(Math.random())))
-    
+
     // function makers
     function difficulty(e){
         console.log(select.val())
@@ -51,8 +51,8 @@ $(function(){
             clearInterval(stopper)
             t=10
             var stopper = setInterval(move, t)
-        } 
-    } 
+        }
+    }
 
     function timekeeper(){
         time.text(`TimeSpent: ${counting}secs`)
@@ -65,7 +65,7 @@ $(function(){
             "left": `+=${foodx}`
         });
     }
-    
+
 
     function increase(){
         color1 = Math.floor(255*Math.random())+1
@@ -89,24 +89,24 @@ $(function(){
                     "top": `-=${foody}`,
                     "left": `-=${foodx}`
                 });
-                var nfoodx = 20*(Math.floor((gwidth/20)*(Math.random()))) 
+                var nfoodx = 20*(Math.floor((gwidth/20)*(Math.random())))
                 var nfoody = 20*(Math.floor((gheight/20)*(Math.random())))
             }else{
-                var nfoodx = 20*(Math.floor((gwidth/20)*(Math.random()))) 
+                var nfoodx = 20*(Math.floor((gwidth/20)*(Math.random())))
                 var nfoody = 20*(Math.floor((gheight/20)*(Math.random())))
             }
             food.css({
                 "top": `-=${catchery}`,
                 "left": `-=${catcherx}`
             });
-            
+
             food.css({
                 "top": `+=${nfoody}`,
                 "left": `+=${nfoodx}`
             });
             scoreel.text(`Score: ${score}`)
             score = score + 1;
-            counter = counter + 1; 
+            counter = counter + 1;
             catcherx = nfoodx;
             catchery = nfoody;
         }
@@ -115,7 +115,7 @@ $(function(){
         var imp = $(".snake")
         var last = $(".snake:last")
         if ((part.offset().top >= ground.offset().top) && (part.offset().top < (ground.offset().top + gheight)) && (part.offset().left >= ground.offset().left) && (part.offset().left < (ground.offset().left + gwidth))){
-            
+
             if (direct === "right"){
                 part.css({
                     'top': "+=0",
@@ -147,7 +147,7 @@ $(function(){
                 }else if(list[list.length-i] === "left"){
                     posx = posx + 20
                 }else if (list[list.length-i] === "up"){
-                    posy = posy + 20 
+                    posy = posy + 20
                 }else if(list[list.length-i] === "down"){
                     posy = posy - 20
                 }
@@ -173,7 +173,7 @@ $(function(){
                     })
                 }
             }
-            
+
             corx = []
             cory = []
         }else{
@@ -186,11 +186,11 @@ $(function(){
 
         }
     }
-    
+
     function turning(e){
         if (e.which === 37){
             if (direct !== "right"){
-                direct = "left";            
+                direct = "left";
             }
         }else if (e.which === 38){
             if (direct !== "down"){
@@ -204,18 +204,18 @@ $(function(){
             if (direct !== "up"){
                 direct = "down";
             }
-        }   
+        }
     }
 
     var stop = setInterval(timekeeper, 1000)
     var stopper = setInterval(move, t);
-    
+
     food_position();
     // event listeners
     show.on("click", function(){
         go.css({
             "display": "none"
-        })       
+        })
         Sheight = $(document).height();
         Swidth = $(document).width();
         gheight = Math.floor(Sheight/20)*20;
@@ -233,15 +233,15 @@ $(function(){
         list = ["right"]
         corx = []
         cory = []
-        foodx = 20*(Math.floor((gwidth/20)*(Math.random()))) 
+        foodx = 20*(Math.floor((gwidth/20)*(Math.random())))
         foody = 20*(Math.floor((gheight/20)*(Math.random())))
         umm = $("#first").nextAll().remove()
         var foodder = document.getElementById("ah")
         umm2 = document.getElementById("first")
-        foodder.style.top = "0px"
+        foodder.style.top = "20px"
         foodder.style.left = "0px"
         food_position()
-        umm2.style.top = "-20px"
+        umm2.style.top = "20px"
         umm2.style.left = "0px"
         stop = setInterval(timekeeper, 1000)
         stopper = setInterval(move, t);
