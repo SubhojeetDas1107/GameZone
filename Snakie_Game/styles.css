@@ -71,21 +71,32 @@ body {
 }
 
 .imf {
-    position: sticky;
+    position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
     align-items: center;
     font-size: 18px;
-    width: 200px;
+    width: 150px;
     background-color: rgb(44, 23, 58);
     color: rgb(177, 223, 13);
     opacity: 0.6;
+    /* flex-direction: row; */
     height: 30px;
     border: 2px solid rgb(100, 21, 61);
 }
 
 #score {
-    float: right;
+    min-width: 100px;
+/* float: right; */
+right: 0px;
+    /* justify-content: flex-end; */
+}
+#highscore{
+        /* justify-content: space-evenly; */
+    margin-left: 40%;
+     margin-right: 60%;
+    min-width: 100px;
 }
 
 #level {
@@ -96,9 +107,11 @@ body {
 }
 
 #time {
-    float: left;
-    padding: 0px 5px 0 5px;
-    min-width: 150px;
+    /* float: left; */
+        /* justify-content: flex-start; */
+    left: 0px;
+     min-width: 100px;
+
 }
 
 select {
@@ -136,7 +149,12 @@ select {
     text-shadow: 5px 5px 5px rgb(206, 145, 145);
     font-size: 40px;
 }
-
+#hscore {
+    margin-top: 70px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgb(206, 145, 145);
+    font-size: 40px;
+}
 button {
     display: block;
     width: 200px;

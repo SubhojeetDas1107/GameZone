@@ -7,6 +7,7 @@ $(function () {
     var go = $("#gameover")
     var show = $("#hah")
     var fscore = $("#fscore")
+    var hscore = $("#hscore")
     var Sheight = $(document).height();
     var Swidth = $(document).width();
     var select = $("#difficulty")
@@ -14,7 +15,9 @@ $(function () {
     var gwidth = Math.floor(Swidth / 20) * 20;
     var direct = "right";
     var scoreel = $("#score");
+    var highs = $("#highscore");
     var time = $("#time");
+    var hiscore = 0;
     var score = 1;
     var t = 150;
     counter = 1;
@@ -25,13 +28,28 @@ $(function () {
     var corx = []
     var cory = []
 
+
+    hiscore = localStorage.getItem("highscore");
+    if (hiscore !== null) {
+        if (score >= hiscore) {
+            localStorage.setItem("highscore", score);
+        }
+    }
+    else {
+        localStorage.setItem("highscore", score);
+    }
+
     // setting up the score
     scoreel.text("Score: 0")
+
+    // setting up the highscore
+    highs.text(`High Score: ${hiscore-1}`)
 
     // catching the elements
     var ground = $("#ground");
     var part = $("#first");
     var food = $(".food");
+
 
     // adjusting the ground
     ground.css({
@@ -105,6 +123,17 @@ $(function () {
             });
             scoreel.text(`Score: ${score}`)
             score = score + 1;
+            localStorage.setItem("score", score);
+            hiscore = localStorage.getItem("highscore");
+            if (hiscore !== null) {
+                if (score > hiscore) {
+                    localStorage.setItem("highscore", score);
+                }
+            }
+            else {
+                localStorage.setItem("highscore", score);
+            }
+
             counter = counter + 1;
             catcherx = nfoodx;
             catchery = nfoody;
@@ -168,6 +197,7 @@ $(function () {
                     clearInterval(stopper);
                     clearInterval(stop)
                     fscore.text(`Score: ${score - 1}`)
+                    hscore.text(`High Score: ${hiscore}`)
                     go.css({
                         "display": "block"
                     })
@@ -180,6 +210,7 @@ $(function () {
             clearInterval(stopper);
             clearInterval(stop)
             fscore.text(`Score: ${score - 1}`)
+            hscore.text(`High Score: ${hiscore}`)
             go.css({
                 "display": "block"
             })
@@ -223,6 +254,7 @@ $(function () {
         direct = "right";
         time1 = document.getElementById("time")
         score = 1;
+        highs.text(`High Score: ${hiscore - 1}`)
         scoreel.text(`Score: ${score - 1}`)
         t = 150;
         counter = 1;
@@ -233,8 +265,8 @@ $(function () {
         list = ["right"]
         corx = []
         cory = []
-        foodx = 20 * (Math.floor((gwidth / 20) * (Math.random())))
-        foody = 20 * (Math.floor((gheight / 20) * (Math.random())))
+        foodx = 10 * (Math.floor((gwidth / 20) * (Math.random())))
+        foody = 10 * (Math.floor((gheight / 20) * (Math.random())))
         umm = $("#first").nextAll().remove()
         var foodder = document.getElementById("ah")
         umm2 = document.getElementById("first")
@@ -272,3 +304,5 @@ $(function () {
         $('.touch_controls').hide();
     }
 })
+
+
