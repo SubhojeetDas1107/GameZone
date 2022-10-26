@@ -10,7 +10,7 @@
     background-color: green;
     border-radius: 12px;
     position: relative;
-    top: 0px;
+    top: 20px;
     left: 0px;
 }
 
@@ -19,7 +19,7 @@ html {
 }
 
 * {
-    margin: 0px; 
+    margin: 0px;
     padding: 0px;
 }
 
@@ -46,7 +46,7 @@ body {
     width: var(--Bsnake-width);
     height: var(--Bsnake-height);
     position: relative;
-    top: -20px;
+    top: 20px;
     left: 0px;
 }
 
@@ -56,7 +56,7 @@ body {
     height: var(--Bsnake-height);
     position: absolute;
     border-radius: 8px;
-    top: 0px;
+    top: 20px;
     left: 0px;
 }
 
@@ -66,27 +66,37 @@ body {
     height: var(--Bsnake-height);
     position: relative;
     border-radius: 5px;
-    top: -20px;
+    top: 20px;
     left: 0px;
 }
 
 .imf {
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
     align-items: center;
     font-size: 18px;
-    width: 200px;
+    width: 150px;
     background-color: rgb(44, 23, 58);
     color: rgb(177, 223, 13);
     opacity: 0.6;
+    /* flex-direction: row; */
     height: 30px;
     border: 2px solid rgb(100, 21, 61);
 }
 
 #score {
-    
-    right: 0px;
+    min-width: 100px;
+/* float: right; */
+right: 0px;
+    /* justify-content: flex-end; */
+}
+#highscore{
+        /* justify-content: space-evenly; */
+    margin-left: 40%;
+     margin-right: 60%;
+    min-width: 100px;
 }
 
 #level {
@@ -97,8 +107,11 @@ body {
 }
 
 #time {
-    padding: 0px 5px 0 5px;
-    min-width: 150px;
+    /* float: left; */
+        /* justify-content: flex-start; */
+    left: 0px;
+     min-width: 100px;
+
 }
 
 select {
@@ -123,7 +136,7 @@ select {
     background-color: rgb(39, 26, 26);
 }
 
-#gameover h1{
+#gameover h1 {
     text-align: center;
     font-size: 40px;
     margin-top: 90px;
@@ -136,7 +149,12 @@ select {
     text-shadow: 5px 5px 5px rgb(206, 145, 145);
     font-size: 40px;
 }
-
+#hscore {
+    margin-top: 70px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgb(206, 145, 145);
+    font-size: 40px;
+}
 button {
     display: block;
     width: 200px;
@@ -156,6 +174,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .touch_controls div {
     border: 2px solid rgb(100, 21, 61);
     color: rgb(177, 223, 13);
@@ -165,18 +184,22 @@ button {
     font-size: 50px;
     opacity: 0.6;
 }
+
 .touch_controls .move_up {
     grid-column: 2;
     grid-row: 1;
 }
+
 .touch_controls .move_down {
     grid-column: 2;
     grid-row: 3;
 }
+
 .touch_controls .move_left {
     grid-column: 1;
     grid-row: 2;
 }
+
 .touch_controls .move_right {
     grid-column: 3;
     grid-row: 2;
