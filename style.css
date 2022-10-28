@@ -1,247 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,body{
-    display: grid;
-    place-items: center;
-    background-color: #121212;
+html,
+body {
+  display: grid;
+  place-items: center;
+  background-color: #121212;
 }
 
-.header{
-    margin-top: 3.5em;
+.header {
+  margin-top: 3.5em;
 }
 
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.outer{
-    position: relative;
-    margin: 0 50px;
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+.outer {
+  position: relative;
+  margin: 0 50px;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
 }
 
-.button{
-    height: 100px;
-    width: 450px;
-    border-radius: 50px;
-    font-family: 'Audiowide', cursive;
+.button {
+  height: 100px;
+  width: 450px;
+  border-radius: 50px;
+  font-family: "Audiowide", cursive;
 }
 
-.outer button, .outer span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.outer button,
+.outer span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.outer button{
-    background: #121212;
-    color: #f2f2f2;
-    outline: none;
-    border: none;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    z-index: 9;
+.outer button {
+  background: #121212;
+  color: #f2f2f2;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 9;
 }
 
-.button button{
-    height: 93px;
-    width: 443px;
-    border-radius: 50px;
-    font-size: 50px;
-    font-family: 'Audiowide', cursive;
+.button button {
+  height: 93px;
+  width: 443px;
+  border-radius: 50px;
+  font-size: 50px;
+  font-family: "Audiowide", cursive;
 }
 
-.outer span{
-    height: 100%;
-    width: 100%;
-    background: inherit;
+.outer span {
+  height: 100%;
+  width: 100%;
+  background: inherit;
 }
 
-.button span{
-    border-radius: 50px;
+.button span {
+  border-radius: 50px;
 }
 
-.outer span:nth-child(1){
-    filter: blur(7px);
+.outer span:nth-child(1) {
+  filter: blur(7px);
 }
 
-.outer span:nth-child(2){
-    filter: blur(14px)
+.outer span:nth-child(2) {
+  filter: blur(14px);
 }
 
-.outer{
-    animation: rotate 1.5s linear infinite;
+.outer {
+  animation: rotate 1.5s linear infinite;
 }
 
 @keyframes rotate {
-    0%{
-        filter: hue-rotate(0deg);
-    }
-    100%{
-        filter: hue-rotate(360deg);
-    }
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
-.container{
-    margin: 15% auto;
-    padding: 0 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+.container {
+  margin: 15% auto;
+  padding: 10px 40px;
+  display: grid;
+  place-content: center;
+  grid-template-rows: repeat(auto, 1fr);
+  grid-template-columns: repeat(auto-fill, 120px);
+  gap: 20px;
+  width: 90vw;
 }
 
-.lights{
-    height: 205px;
-    width: 120px;
-    margin: 0 10px;
-    border-radius: 10px;
-    animation: rotate 1.5s linear infinite;
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+.lights {
+  height: 225px;
+  width: 120px;
+  margin: 0 10px;
+  border-radius: 10px;
+  animation: rotate 1.5s linear infinite;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
 }
 
-.card{
-    height: 200px;
-    width: 115px;
-    margin-top: 2.5px;
-    margin-left: 2.5px;
-    background-color: #121212;
-    border-radius: 10px;
+.card {
+  height: 220px;
+  width: 115px;
+
+  margin-top: 2.5px;
+  margin-left: 2.5px;
+  background-color: #121212;
+  border-radius: 10px;
 }
 
-img{
-    height: 90px;
-    width: 90px;
-    margin: 12.5px 0px 12.5px 12.5px;
-    align-items: center;
+img {
+  height: 110px;
+  width: 90px;
+  margin: 12.5px 0px 12.5px 12.5px;
+  align-items: center;
 }
 
-.content{
-    color: #f2f2f2;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    font-family: 'Electrolize', sans-serif;
-    font-weight: bolder;
-    padding: 4px 0px;
-    text-align: center;
-    font-size: large;
-    background-color: #292929;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.content {
+  color: #f2f2f2;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-family: "Electrolize", sans-serif;
+  font-weight: bolder;
+  padding: 4px 0px;
+  text-align: center;
+  font-size: large;
+  background-color: #292929;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.links{
-    text-align: center;
+.links {
+  text-align: center;
 }
 
-.lights button{
-    width: 100%;
-    height: 24px;
-    outline: none;
-    border: none;
-    background-color: #121212;
+.lights button {
+  width: 100%;
+  height: 24px;
+  outline: none;
+  border: none;
+  background-color: #121212;
 }
 
-.links i{
-    padding: 7px;
-    z-index: 2;
+.links i {
+  padding: 7px;
+  z-index: 2;
 }
 
-.links a{
-    display: inline-block;
-    height: 50px;
-    width: 55px;
-    cursor: pointer;
+.links a {
+  display: inline-block;
+  height: 50px;
+  width: 55px;
+  cursor: pointer;
 }
 
-.social{
-    display: flex;
-    margin-bottom: 30px;
+.social {
+  display: flex;
+  margin-bottom: 30px;
 }
 
-.inner{
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-    height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    animation: rotate 1.5s linear infinite;
-    margin: 0px 3px;
+.inner {
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  animation: rotate 1.5s linear infinite;
+  margin: 0px 3px;
 }
 
-.social a{
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
-    left: 10px;
-    text-align: center;
-    justify-content: center;
-    background-color: #121212;
+.social a {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  left: 10px;
+  text-align: center;
+  justify-content: center;
+  background-color: #121212;
 }
 
-.inner-a{
-    padding: 1px;
+.inner-a {
+  padding: 1px;
 }
 
-.social i{
-    padding-top: 3px;
+.social i {
+  padding-top: 3px;
 }
 
-h3{
-    color: #f2f2f2;
-    font-family: 'Electrolize', sans-serif;
-    font-weight: lighter;
-    margin-bottom: 5px;
-    font-size: 1em;
+h3 {
+  color: #f2f2f2;
+  font-family: "Electrolize", sans-serif;
+  font-weight: lighter;
+  margin-bottom: 5px;
+  font-size: 1em;
 }
 
-footer{
-    position: fixed;
-    bottom: 0;
-    background-color: #292929;
-    width: 100%;
-    text-align: center;
-    padding: 4px;
-    color: #f2f2f2;
-    font-size: 12px;
-    font-family: 'Electrolize', sans-serif;
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #292929;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  color: #f2f2f2;
+  font-size: 12px;
+  font-family: "Electrolize", sans-serif;
 }
 
-footer a{
-    text-decoration: none;
-    color: #f2f2f2;
-    cursor: pointer;
+footer a {
+  text-decoration: none;
+  color: #f2f2f2;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
-    .container{
-        display: grid;
-        grid-template-columns: 140px 140px;
-        margin-top: 10%;
-    }
-    .lights{
-        margin: 10px;
-    }
-    .header{
-        margin-top: 5rem;
-        margin-bottom: 4rem;
-    }
-    h3{
-        margin-top: 4rem;
-    }
+  .container {
+    display: grid;
+    grid-template-columns: 140px 140px;
+    margin-top: 10%;
+  }
+  .lights {
+    margin: 10px;
+  }
+  .header {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+  h3 {
+    margin-top: 4rem;
+  }
 }
