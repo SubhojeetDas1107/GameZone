@@ -29,6 +29,28 @@ function setGame() {
     setTwo();
     setTwo();
 
+    // clickable images for possibility to move with mouse
+    const imgs = document.getElementsByTagName('img');
+    const imgPressed = e => {
+        if(e.target.id == 'upArrow'){
+            slideUp();
+            setTwo();
+        }
+        else if(e.target.id == 'downArrow'){
+            slideDown();
+            setTwo();
+        }
+        else if(e.target.id == 'leftArrow'){
+            slideLeft();
+            setTwo();
+        }else if(e.target.id == 'rightArrow'){
+            slideRight();
+            setTwo();
+        }
+    }
+    for (let img of imgs){
+        img.addEventListener('click', imgPressed)
+    }
 }
 
 function updateTile(tile, num) {

@@ -114,3 +114,18 @@ const game = () => {
 
 //start the game function
 game();
+
+var forDark = document.getElementById("for-dark");
+var forLight = document.getElementById("for-light");
+function Black() {
+    document.body.style.backgroundColor = "white";
+    forLight.style.backgroundColor = "#333";
+    forDark.style.backgroundColor = "white";
+    document.style.body.color="w";
+}
+function White() {
+    document.body.style.backgroundColor ="rgb(39, 41, 68)";
+    forDark.style.backgroundColor = "#333";
+    forLight.style.backgroundColor = "white";
+    document.style.body.color="black";
+}

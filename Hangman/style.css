@@ -18,7 +18,7 @@ body {
   left: 50%;
   padding: 3em;
   border-radius: 0.6em;
-  box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+  box-shadow: 0 1.2em 1.9em aquamarine;
 }
 #options-container {
   text-align: center;
@@ -26,6 +26,8 @@ body {
 #options-container div {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
   margin: 1.2em 0 2.4em 0;
 }
@@ -112,4 +114,34 @@ canvas {
 }
 .lose-msg {
   color: #fe5152;
+}
+
+
+.mode {
+  /* border: 1px solid #333; */
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0;
+  display: flex;
+  /* margin: auto; */
+  justify-content: center;
+  align-items:flex-start;
+  width:fit-content;
+  box-shadow:aquamarine 0px 2px 4px 0px, aquamarine 0px 2px 16px 0px;
+}
+
+#for-light {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-color: white;
+  border: 1px solid silver;
+  background-color:#333;
+}
+
+#for-dark {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-left: -10px;
+  border-color: white;
+  border: 1px solid silver;
 }
