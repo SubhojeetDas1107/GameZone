@@ -372,7 +372,7 @@ function renderGame(){
     whoPlays = playercardsDivEl;
     pointsEl.style.visibility = 'visible';
     console.log(cards)
-    //messageEl.innerHTML = 'Do you want another card?'
+    
 
     var audio = new Audio('/blackjack/sounds/carddeal2.wav');
     audio.play();
@@ -383,7 +383,7 @@ function renderGame(){
 
 //hit me with another card
 function anotherCard(){
-    //holdBtn.style.display = 'inline-block'; ####################################### niet nodig??
+    
     whoPlays = playercardsDivEl;
     randomCard(cards);
     audioFunc();
@@ -404,7 +404,7 @@ function dealerTurn() {
     whoPlays = dealerCardsDivEl;
     dealerCardsId.style.display = 'block';
     randomCard(cards);
-    //hieronder ga ik iets proberen om de tweede dealerkaart te vertragen
+    
     setTimeout(() => {  
         randomCard(cards);
         audio.play();
@@ -444,7 +444,7 @@ function conditFunc() {
         anotherCardEl.style.display = 'none'; 
         playAgain.style.display = 'inline-block';  
         playAgain.style.backgroundColor = 'var(--gold)';
-        return dealerAlive; //nog nodig?
+        return dealerAlive; 
         
 
     } if ( dealerSum > 21 ) {
@@ -458,8 +458,7 @@ function conditFunc() {
         coins = coins + 1;
         coinsSndFunc();
         coinsEl.innerHTML = 'coins: ' + coins;
-        //dealerAlive = false; nog nodig?
-        //return dealerAlive; nog nodig?
+        
         
     } else {
         dealHitAgain();
@@ -486,11 +485,11 @@ function playerContFun() {
         startBtn.style.display = 'none'; 
         holdBtn.style.display = 'none'; 
         playAgain.style.display = 'inline-block'; 
-        playAgain.style.backgroundColor = 'var(--gold)';//nog nodig?
+        playAgain.style.backgroundColor = 'var(--gold)';
         coins = coins - 1;
         coinsEl.innerHTML = 'coins: ' + coins;
         isAlive = false;
-        coinsSndFunc(); //nodig want loose?
+        coinsSndFunc(); 
         
 
     } else if ( sum === 21 ) {
@@ -524,7 +523,7 @@ function playAgainFunction() {
     isAlive = true;
     cards = [];
     deckBuilder()
-    //messageEl.innerHTML = 'Would you like another card?';
+    
     messageEl.innerHTML = '';
     removeAllChildNodes(playercardsDivEl)
     removeAllChildNodes(dealerCardsDivEl)
@@ -556,7 +555,7 @@ function dealerOrPlayer() {
 function audioFunc(){
     setTimeout(() => {
         audio.play();
-    }, 100);// lijkt goed..mag nog iets beter afgesteld worden misschien*******************************
+    }, 100);
 }
 
 function coinsAudioFunc(){

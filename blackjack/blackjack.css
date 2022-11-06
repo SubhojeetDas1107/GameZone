@@ -10,10 +10,6 @@
     padding: 0;
 }
 
-/* a:hover a:focus a:active {
-    text-decoration: none;
-    color: inherit;
-} */
 
 body {
     background-image: url(images/green-table.jpg);
@@ -25,10 +21,18 @@ body {
     overflow: hidden;
 }
 
-/* #wrapper {
-    width: 100%;
-    height: 100%;
-} */
+.homeLink { 
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Audiowide', cursive;
+     
+
+}
+
+.homeLink:hover {
+    color: #ff00e0;
+}
 
 #message{
     margin: 5px 20px;
@@ -36,9 +40,7 @@ body {
     font-weight: bold;
 }
 
-/* .text {
-    color: green;
-} */
+
 
 #messageDiv {
     font-size: 40px;
@@ -53,13 +55,13 @@ body {
 #playerCards {
     height: 180px;
     margin: 5px;
-    /*opacity: 0.9;*/
+    
 }
 
 #dealerCards {
     height: 180px;
     margin: 5px;
-    /*opacity: 0.9;*/
+    
 }
 
 #card-id {
@@ -94,12 +96,9 @@ body {
     
 }
 #coins {
-    /*visibility: hidden;*/
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px 10px;
-    /*margin-top: 10px;
-    margin-left: 20px;*/
     font-size: 26px;
     
 }
@@ -120,17 +119,12 @@ body {
 } 
 
 #startBtn {
-    /*padding: 10px;
-    margin: 10px;
-    border-radius: 15%;*/
+    
     background-color: gold;
     
 }
 
 #anotherCardBtn {
-    /*padding: 10px;
-    margin: 10px;
-    border-radius: 15%;*/
     background-color: var(--gold);
     display: none;
 
@@ -138,9 +132,6 @@ body {
 
 #againBtn {
     display: none;
-    /*padding: 10px;
-    margin: 10px;
-    border-radius: 15%;*/
     background-color: rgba(172, 148, 14, 0.681);
 }
 
@@ -172,32 +163,7 @@ body {
     
 }
 
-/* #link {
-    text-align: center;
-    margin-top: 60px;
-    color: blue;
-    
-}
 
-#link a {
-    color: gold;
-    text-decoration: none;
-} */
-
-/* #linkDiv {
-    margin-top: 200px;
-
-}
-
-#portfolioLink  {
-    text-decoration: none;
-    color: gold;
-    
-}  */
-
-/* .invisible {
-    display: none;
-} */
 
 @media ( max-width: 500px ) {
     #card-id {
@@ -231,8 +197,4 @@ body {
 
 };
 
-/* @media ( max-width: 500px ) {
-    #message {
-        color: red;
-    }
-} */
+
