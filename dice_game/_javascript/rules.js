@@ -10,7 +10,7 @@ document.querySelector('#roll').addEventListener('click', function(){ //anonymou
 
         diceDOM.style.display = 'block';
 
-        diceDOM.src = '_images/dice-six-faces-'+dice+'.svg';
+        diceDOM.src = '_images/dice/dice'+dice+'.png';
 
         if(dice !== 1){
             roundScore += dice;
