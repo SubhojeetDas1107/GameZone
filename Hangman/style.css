@@ -82,7 +82,7 @@ body {
   font-size: 1.8em;
   margin: 0.6em 0 1.2em 0;
 }
-canvas {
+.hangmanIcons {
   display: block;
   margin: auto;
   border: 1px solid #000000;
