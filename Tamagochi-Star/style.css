@@ -1,0 +1,130 @@
+body{
+  margin: 0;
+  padding: 0;
+  min-height:100vh ;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,0,0);
+}
+
+.display{
+  position: relative;
+  
+  display: flex;
+  background-color: rgba(135, 207, 235, 0.329);
+  align-items: center;
+  justify-content: center;
+  border: 2px solid  ;
+  height: 400px;
+  width: 100% ;
+  border-radius: 10px;
+ 
+}
+.glass{
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(73, 148, 218, 0.795);
+  filter: blur(10px);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.displaySleep{
+  z-index:5;
+  background-color: rgba(0,0,0,0.5)
+}
+#grogu{
+  position: relative;
+  z-index: 4;
+}
+
+.stack{
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items:  center;
+  width: 100%;
+
+}
+progress{
+  width: 100%;
+}
+.container{
+  width: 70%;
+}
+.controls{
+  margin: auto;
+  width: 99%;
+  display:flex ;
+  padding-top: 2px;
+  gap: 5px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.controls button{
+  font-weight: bolder;
+  width:300px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  animation: rotate 1.5s linear infinite;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0)
+}
+#start-screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  top:0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(47, 49, 49, 0.822);
+  color: white;
+  font-size: x-large;
+  z-index: 50;
+}
+#eyes-tired{
+  opacity:0;
+}
+#eyes-very-tired{
+  opacity:0;
+}
+#body-very-tired{
+  opacity:0;
+}
+#mouth-hungry{
+  opacity:0;
+}
+#mouth-very-hungry{
+  opacity:0;
+}
+#sleeping-grogu{
+  position: relative;
+  z-index: 4;
+  display: none;
+}
+#game-over{
+  position: relative;
+  z-index: 4;
+  display: none;
+}
+
+@keyframes rotate {
+  0%{
+      filter: hue-rotate(0deg);
+  }
+  100%{
+      filter: hue-rotate(360deg);
+  }
+}
